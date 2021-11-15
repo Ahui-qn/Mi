@@ -1,0 +1,950 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: scroll;
+}
+
+.common {
+    width: 1225px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.full {
+    width: 100%;
+    height: 40px;
+    background-color: #2d2d2d;
+}
+
+.full .menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.full .menu .left ul {
+    width: 785px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.full .menu .left ul li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.full .menu .left ul li:nth-of-type(-n +12):after {
+    content: "";
+    display: inline-block;
+    margin-left: 8px;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(215, 89, 89);
+    vertical-align: middle;
+}
+
+.full .menu .left ul li a {
+    color: rgb(184, 184, 184);
+    font-size: 12px;
+    line-height: 40px
+}
+
+.full .menu .left ul li:hover a {
+    color: #fff;
+}
+
+
+/* left完成 */
+
+.full .menu .right {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.full .menu .right .login {
+    width: 125px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full .menu .right .login li:nth-of-type(-n + 2)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(172, 52, 52);
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.full .menu .right .login li a {
+    color: #c2bebe;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.full .menu .right .login li:hover a {
+    color: #fff;
+}
+
+
+/* 登录注册消息通知完成 */
+
+
+/* 右上角添加购物车部分 */
+
+.full .menu .right a .cart {
+    width: 120px;
+    height: 40px;
+    position: relative;
+    background-color: rgb(249, 254, 195);
+}
+
+.full .menu .right a .cart>li i {
+    line-height: 37px;
+    margin-left: 15px;
+    font-size: 22px;
+    position: absolute;
+}
+
+.full .menu .right a .cart .li_hover {
+    font-size: 13px;
+    position: absolute;
+    right: 18px;
+    line-height: 40px;
+}
+
+.full .menu .right a .cart .li_hover .added {
+    position: absolute;
+    right: -18px;
+    width: 316px;
+    height: 0px;
+    background-color: rgb(193, 133, 133);
+    transition: .4s .2s ease;
+    overflow: hidden;
+}
+
+.full .menu .right a .cart .li_hover .added>li {
+    color: #2d2d2d;
+    line-height: 100px;
+    text-align: center;
+}
+
+.full .menu .right a .cart:hover .li_hover .added {
+    height: 100px;
+}
+
+.full .menu .right a .cart:hover>li {
+    color: #ff7600;
+}
+
+
+/* 购物车完成 */
+
+.nav_box {
+    background-color: rgb(255, 199, 199);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* nav */
+
+
+/* logo部分 */
+
+.nav_box .nav_logo {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    background-image: url(images/logo-mi2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 22px;
+}
+
+
+/* logo部分结束 */
+
+
+/* 下拉菜单和搜索框 */
+
+.nav_box .nav_content {
+    width: 980px;
+    height: 100px;
+    background-color: rgb(195, 237, 250);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_box .nav_content ul.nav_content_hover1 {
+    width: 488px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(228, 208, 255);
+}
+
+.nav_box .nav_content ul.nav_content_hover2 {
+    display: flex;
+    margin-left: -97px;
+}
+
+.nav_box .nav_content ul li {
+    flex-shrink: 0;
+    padding: 0 10px;
+    height: 100px;
+    background-color: rgb(166, 202, 249);
+}
+
+.nav_box .nav_content ul li>a {
+    color: #2d2d2d;
+    font-size: 15px;
+    line-height: 100px;
+    background-color: rgb(243, 255, 206);
+}
+
+.nav_box .nav_content ul li .mark {
+    position: absolute;
+    z-index: 10001;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: rgb(188, 255, 226);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.nav_box .nav_content ul li .mark .mi_common {
+    width: 1218px;
+    height: 230px;
+    background-color: rgb(252, 208, 141);
+    display: flex;
+    overflow: hidden;
+    z-index: 100000;
+    transition: 2s;
+}
+
+.nav_box .nav_content ul li .mark .mi_common a {
+    background-repeat: no-repeat;
+    background-position: center 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    line-height: 22px;
+    font-size: 13px;
+    color: #2d2d2d;
+    width: 203px;
+    height: 230px;
+    background-color: rgb(239, 255, 254);
+}
+
+.nav_box .nav_content ul li .mark .mi_common a div {
+    color: #ff7600;
+}
+
+.nav_box .nav_content ul li .mark .mi_common span {
+    width: 1px;
+    height: 100px;
+    margin-top: 35px;
+    background-color: rgb(222, 44, 44);
+}
+
+.nav_box .nav_content ul:hover .mark {
+    height: 230px;
+    transition: 1s;
+}
+
+.nav_box .nav_content ul li:hover .mark .mi_common {
+    position: relative;
+    z-index: 10000000;
+    transition: 0s;
+}
+
+
+/* 下面是第二层下拉菜单的背景图片 */
+
+
+/* —————————————————————————————————————————————————————————————————————————————————————————— */
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(1) {
+    background-image: url(images/nav_images/miphone/ia_100000173.webp);
+}
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(2) {
+    background-image: url(images/nav_images/miphone/ia_100000174.webp);
+}
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(3) {
+    background-image: url(images/nav_images/miphone/ia_100000175.webp);
+}
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(4) {
+    background-image: url(images/nav_images/miphone/ia_100000176.webp);
+}
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(5) {
+    background-image: url(images/nav_images/miphone/ia_100000177.webp);
+}
+
+.nav_box .nav_content ul li .mark .miphone a:nth-of-type(6) {
+    background-image: url(images/nav_images/miphone/ia_100000178.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(1) {
+    background-image: url(images/nav_images/redmi/ia_100000214.webp);
+}
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(2) {
+    background-image: url(images/nav_images/redmi/ia_100000215.webp);
+}
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(3) {
+    background-image: url(images/nav_images/redmi/ia_100000216.webp);
+}
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(4) {
+    background-image: url(images/nav_images/redmi/ia_100000217.webp);
+}
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(5) {
+    background-image: url(images/nav_images/redmi/ia_100000218.webp);
+}
+
+.nav_box .nav_content ul li .mark .redmi a:nth-of-type(6) {
+    background-image: url(images/nav_images/redmi/ia_100000219.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(1) {
+    background-image: url(images/nav_images/mitv/ia_100000185.webp);
+}
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(2) {
+    background-image: url(images/nav_images/mitv/ia_100000186.webp);
+}
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(3) {
+    background-image: url(images/nav_images/mitv/ia_100000187.webp);
+}
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(4) {
+    background-image: url(images/nav_images/mitv/ia_100000188.webp);
+}
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(5) {
+    background-image: url(images/nav_images/mitv/ia_100000189.webp);
+}
+
+.nav_box .nav_content ul li .mark .mitv a:nth-of-type(6) {
+    background-image: url(images/nav_images/mitv/ia_100000190.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(1) {
+    background-image: url(images/nav_images/netobook/ia_100000191.webp);
+}
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(2) {
+    background-image: url(images/nav_images/netobook/ia_100000192.webp);
+}
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(3) {
+    background-image: url(images/nav_images/netobook/ia_100000193.webp);
+}
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(4) {
+    background-image: url(images/nav_images/netobook/ia_100000194.webp);
+}
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(5) {
+    background-image: url(images/nav_images/netobook/ia_100000195.webp);
+}
+
+.nav_box .nav_content ul li .mark .netobook a:nth-of-type(6) {
+    background-image: url(images/nav_images/netobook/ia_100000196.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(1) {
+    background-image: url(images/nav_images/home_appliances/ia_100000214.webp);
+}
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(2) {
+    background-image: url(images/nav_images/home_appliances/ia_100000215.webp);
+}
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(3) {
+    background-image: url(images/nav_images/home_appliances/ia_100000216.webp);
+}
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(4) {
+    background-image: url(images/nav_images/home_appliances/ia_100000217.webp);
+}
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(5) {
+    background-image: url(images/nav_images/home_appliances/ia_100000218.webp);
+}
+
+.nav_box .nav_content ul li .mark .home_appliances a:nth-of-type(6) {
+    background-image: url(images/nav_images/home_appliances/ia_100000219.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(1) {
+    background-image: url(images/nav_images/mifi/ia_100000203.webp);
+}
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(2) {
+    background-image: url(images/nav_images/mifi/ia_100000204.webp);
+}
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(3) {
+    background-image: url(images/nav_images/mifi/ia_100000205.webp);
+}
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(4) {
+    background-image: url(images/nav_images/mifi/ia_100000206.webp);
+}
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(5) {
+    background-image: url(images/nav_images/mifi/ia_100000207.webp);
+}
+
+.nav_box .nav_content ul li .mark .mifi a:nth-of-type(6) {
+    background-image: url(images/nav_images/mifi/ia_100000208.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+.nav_box .nav_content ul li .mark .AI_hardware a:nth-of-type(1) {
+    background-image: url(images/nav_images/AI_hardware/ia_100000209.webp);
+}
+
+.nav_box .nav_content ul li .mark .AI_hardware a:nth-of-type(2) {
+    background-image: url(images/nav_images/AI_hardware/ia_100000210.webp);
+}
+
+.nav_box .nav_content ul li .mark .AI_hardware a:nth-of-type(3) {
+    background-image: url(images/nav_images/AI_hardware/ia_100000211.webp);
+}
+
+.nav_box .nav_content ul li .mark .AI_hardware a:nth-of-type(4) {
+    background-image: url(images/nav_images/AI_hardware/ia_100000212.webp);
+}
+
+.nav_box .nav_content ul li .mark .AI_hardware a:nth-of-type(5) {
+    background-image: url(images/nav_images/AI_hardware/ia_100000213.webp);
+}
+
+
+/* ——————————————————————————————————————————————————————————————————————————————————- */
+
+
+/* 右边搜索框--—————————————————————————————————————————— */
+
+.nav_box .nav_content form {
+    display: flex;
+}
+
+.nav_box input[class="search"] {
+    width: 245px;
+    height: 50px;
+    outline: medium;
+    border: solid 1px #eee;
+    padding: 0px 10px 0px 10px;
+    transition: .3s ease;
+}
+
+.nav_box input[class="search"]:focus {
+    border: solid 1px #ff7600;
+    transition: .3s ease;
+}
+
+.nav_box input[class="search"]:focus+button[class^="button_search"] {
+    border: solid 1px #ff7600;
+}
+
+.nav_box button[class^="button_search"] {
+    margin-left: -1px;
+    width: 50px;
+    height: 50px;
+    font-size: 23px;
+    border: solid 1px #eee;
+    background-color: #fff;
+    transition: .3s ease;
+}
+
+.nav_box button[class^="button_search"]:hover {
+    transition: .3s ease;
+    background-color: #ff7600;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+/* nav 完-----———————————————————————————————————————————————————————— */
+
+
+/* banner */
+
+.banner_box {
+    font-size: 0;
+    position: relative;
+}
+
+.banner_box .banner_nav {
+    float: left;
+    width: 235px;
+    height: 460px;
+    background-color: #72717166;
+    overflow: visible;
+    position: relative;
+    z-index: 1000;
+}
+
+.banner_box .banner_nav .banner_menu {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.banner_box .banner_nav .banner_menu li {
+    background-color: rgba(147, 135, 135, 0);
+    line-height: 41px;
+    padding-left: 28px;
+    position: relative;
+}
+
+.banner_box .banner_nav .banner_menu li:hover {
+    background-color: #ff7600;
+}
+
+.banner_box .banner_nav .banner_menu li i::before {
+    font-size: 15px;
+    color: #ccc;
+    vertical-align: middle;
+    float: right;
+    margin-right: 20px;
+}
+
+.banner_box .banner_nav .banner_menu li .banner_ss {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    position: absolute;
+    top: -20px;
+    left: 235px;
+    height: 460px;
+    background-color: green;
+    visibility: hidden;
+}
+
+.banner_box .banner_nav .banner_menu li:hover .banner_ss {
+    visibility: visible;
+}
+
+.banner_box .banner_nav .banner_menu li .banner_ss span {
+    width: 247px;
+    height: 76px;
+}
+
+
+/* 轮播图———————————————————————————————————————————————————— */
+
+.banner_box .banner_carousel {
+    position: relative;
+    width: 1225px;
+    height: 460px;
+}
+
+.banner_box .banner_carousel a img {
+    position: absolute;
+    left: 0;
+    width: 1225px;
+    height: 460px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.banner_box .banner_carousel div {
+    position: absolute;
+    bottom: 30px;
+    z-index: 100;
+    right: 30px;
+}
+
+.banner_box .banner_carousel div label {
+    display: inline-block;
+    margin-left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: solid 2px rgb(181, 179, 179);
+    background-color: rgb(123, 119, 119);
+}
+
+.banner_box .banner_carousel input[type="radio"] {
+    display: none;
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(1):checked~a:nth-of-type(1) img {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(2):checked~a:nth-of-type(2) img {
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(3):checked~a:nth-of-type(3) img {
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(4):checked~a:nth-of-type(4) img {
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(1):checked~div label:nth-of-type(1),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(2):checked~div label:nth-of-type(2),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(3):checked~div label:nth-of-type(3),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(4):checked~div label:nth-of-type(4) {
+    background-color: #fff;
+}
+
+.banner_box .banner_carousel .button_left label {
+    background-image: url('images/banner/icon-button-left.png');
+}
+
+.banner_box .banner_carousel .button_right label {
+    background-image: url('images/banner/icon-button-right.png');
+}
+
+.banner_box .banner_carousel .button_right:hover label,
+.banner_box .banner_carousel .button_left:hover label {
+    background-color: rgba(128, 128, 128, 0.277);
+}
+
+.banner_box .banner_carousel .button_left label {
+    position: absolute;
+    left: 235px;
+    top: 43%;
+    z-index: 1000;
+    width: 40px;
+    height: 70px;
+    border-radius: 0px 3px 3px 0px;
+    display: none;
+}
+
+.banner_box .banner_carousel .button_right label {
+    position: absolute;
+    right: 0;
+    top: 43%;
+    z-index: 1000;
+    width: 40px;
+    height: 70px;
+    border-radius: 3px 0 0 3px;
+    display: none;
+    /*  checked第二个label的时候，其他的均为display：none；*/
+}
+
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(1):checked~.button_left label:nth-of-type(4),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(1):checked~.button_right label:nth-of-type(2),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(2):checked~.button_left label:nth-of-type(1),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(2):checked~.button_right label:nth-of-type(3),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(3):checked~.button_left label:nth-of-type(2),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(3):checked~.button_right label:nth-of-type(4),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(4):checked~.button_left label:nth-of-type(3),
+.banner_box .banner_carousel input[type="radio"]:nth-of-type(4):checked~.button_right label:nth-of-type(1) {
+    display: block;
+    /*当被checked的时候显示*/
+}
+
+
+/* 轮播图完成------————————————————————————————————————————————————————- */
+
+.banner_box .banner_two {
+    height: 170px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+
+/* 六宫格子----------------———————————————————————————————————— */
+
+.banner_box .banner_two .banner_submenu {
+    width: 235px;
+    height: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.banner_box .banner_submenu a {
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 115px;
+    width: 78px;
+    height: 85px;
+    font-size: 12px;
+    color: rgb(194, 186, 186);
+    background-color: rgb(93, 81, 81);
+    transition: .2s;
+}
+
+.banner_box .banner_submenu a img {
+    position: absolute;
+    left: 26px;
+    top: 20px;
+    width: 25px;
+    opacity: .8;
+    transition: .2s;
+}
+
+.banner_box .banner_submenu a:hover {
+    color: rgb(232, 232, 232);
+}
+
+.banner_box .banner_submenu a:hover img {
+    opacity: 1;
+}
+
+.banner_box .banner_submenu span:nth-of-type(1),
+.banner_box .banner_submenu span:nth-of-type(2) {
+    position: absolute;
+    z-index: 100;
+    top: 8px;
+    width: 1px;
+    height: 70px;
+    background-color: rgb(99, 97, 96);
+}
+
+.banner_box .banner_submenu span:nth-of-type(6),
+.banner_box .banner_submenu span:nth-of-type(7) {
+    position: absolute;
+    z-index: 100;
+    top: 90px;
+    width: 1px;
+    height: 70px;
+    background-color: rgb(99, 97, 96);
+}
+
+.banner_box .banner_submenu span:nth-of-type(1) {
+    left: 78px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(2) {
+    left: 156px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(6) {
+    left: 78px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(7) {
+    left: 156px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(3),
+.banner_box .banner_submenu span:nth-of-type(4),
+.banner_box .banner_submenu span:nth-of-type(5) {
+    position: absolute;
+    top: 83px;
+    width: 65px;
+    height: 1px;
+    background-color: rgb(99, 97, 96);
+}
+
+.banner_box .banner_submenu span:nth-of-type(3) {
+    left: 10px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(4) {
+    left: 85px;
+}
+
+.banner_box .banner_submenu span:nth-of-type(5) {
+    right: 10px;
+}
+
+
+/* 六宫格END————————————————————————————————————————————————————————————————- */
+
+.banner_box .banner_two>a {
+    width: 316px;
+    transition: .3s;
+}
+
+.banner_box .banner_two>a img {
+    /*右边三张图的a标签样式*/
+    width: 100%;
+}
+
+.banner_box .banner_two>a:hover {
+    box-shadow: 0px 0px 12px 6px rgb(223, 220, 220);
+}
+
+
+/* mian区域------—————————————————————————————————————————————————— */
+
+main {
+    margin-top: 30px;
+    width: 100%;
+    height: 900px;
+    background-color: rgb(244, 244, 244);
+}
+
+.mi_seckill .seckill_font {
+    width: 1225px;
+    height: 60px;
+}
+
+.mi_seckill .seckill_font>h2 {
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.mi_seckill .seckill_carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mi_seckill .seckill_carousel .left {
+    border-top: solid 1px red;
+    width: 235px;
+    height: 340px;
+    background-color: rgb(240, 234, 234);
+    background-image: url("images/main/lightning.webp");
+    background-repeat: no-repeat;
+    background-position: center 110px;
+}
+
+
+/* 20:20场 */
+
+.mi_seckill .seckill_carousel .left div:nth-of-type(1) {
+    height: 200px;
+    font-size: 20px;
+    line-height: 145px;
+    text-align: center;
+    color: #ff0000;
+}
+
+
+/*距离开始还有*/
+
+.mi_seckill .seckill_carousel .left div:nth-of-type(2) {
+    height: 46px;
+    font-size: 15px;
+    text-align: center;
+    color: rgb(113, 113, 113);
+}
+
+
+/* 倒计时 */
+
+.mi_seckill .seckill_carousel .left div:nth-of-type(3) {
+    display: flex;
+    height: 44px;
+    width: 168px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.mi_seckill .seckill_carousel .left div:nth-of-type(3) .bark_box {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    line-height: 46px;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(101, 93, 93);
+}
+
+.mi_seckill .seckill_carousel .left div:nth-of-type(3) .cc {
+    height: 46px;
+    line-height: 46px;
+    font-size: 28px;
+}
+
+.mi_seckill .seckill_carousel .right {
+    width: 980px;
+    height: 340px;
+    background-color: #fff;
+    /* overflow: hidden; */
+}
+
+.mi_seckill .seckill_carousel .right ul {
+    display: flex;
+    background-color: pink;
+    transition: 1s;
+}
+
+.mi_seckill .seckill_carousel .right ul li {
+    width: 235px;
+    height: 340px;
+    flex-shrink: 0;
+    background-color: green;
+}
+
+.mi_seckill .seckill_carousel .right ul li:nth-of-type(n+2) {
+    margin-left: 15px;
+}
+
+.mi_seckill .seckill_carousel .right input[type="radio"]:nth-of-type(2):checked~ul {
+    margin-left: -1000px;
+}
+
+.mi_seckill .seckill_carousel .right input[type="radio"]:nth-of-type(3):checked~ul {
+    margin-left: -1505px;
+}
+
+.mi_seckill .seckill_carousel .right input[type="radio"]:nth-of-type(4):checked~ul {
+    margin-left: -1505px;
+}
+
+
+/* 轮播图按钮 */
